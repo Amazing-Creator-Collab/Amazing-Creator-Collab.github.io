@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chaidir — Skill Hunter & English Educator</title>
+  <title>Chaidir — A Skill Hunter</title>
   <style>
     body {
       background: linear-gradient(180deg, #0f1a12 0%, #1a2b1c 35%, #2b3b22 70%, #1a2415 100%);
       color: #f0e6d2;
-      font-family: Georgia, serif;
+      font-family: Ms Mincho, serif;
       max-width: 750px;
       margin: 0 auto;
-      padding: 80px 20px;
+      padding: 60px 20px;
       line-height: 1.7;
       min-height: 100vh;
       box-sizing: border-box;
@@ -23,7 +23,7 @@
     h2 {
       color: #d9b26a;
       font-size: 1.4em;
-      margin-top: 60px;
+      margin-top: 10px;
       border-bottom: 1px solid rgba(217,178,106,0.3);
       padding-bottom: 8px;
     }
@@ -75,7 +75,7 @@
       font-size: 1.15em;
       margin-bottom: 10px;
     }
-    .job, .edu-item, .cert-item {
+    .job, .edu-item {
       margin-top: 22px;
       padding-bottom: 18px;
       border-bottom: 1px solid rgba(217,178,106,0.15);
@@ -111,113 +111,175 @@
       font-size: 0.85em;
       text-align: center;
     }
+
+    /* Tabs */
+    .tab-bar {
+      display: flex;
+      gap: 10px;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid rgba(217,178,106,0.3);
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      color: #b8c9a8;
+      font-family: Georgia, serif;
+      font-size: 1em;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+    }
+    .tab-btn:hover {
+      color: #d9b26a;
+    }
+    .tab-btn.active {
+      color: #e8a33d;
+      border-bottom: 3px solid #e8a33d;
+      font-weight: bold;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
   <h1>Chaidir</h1>
   <p class="subtitle">Hunter of useful skills · English Educator</p>
 
-  <div class="bio">
-    <p>I don't hunt in jungles. I hunt in the feed.</p>
-    <p>Social media is my hunting ground — I go deep looking for skills worth catching, ideas worth keeping, and knowledge worth building on. By profession, I teach English — helping students catch skills of their own.</p>
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="showTab('about')">About</button>
+    <button class="tab-btn" onclick="showTab('experience')">Experience</button>
+    <button class="tab-btn" onclick="showTab('education')">Education & Certs</button>
   </div>
 
-  <span class="tag">🎯 Currently hunting: new skills</span>
+  <!-- ABOUT TAB -->
+  <div id="about" class="tab-content active">
+    <div class="bio">
+      <p>I don't hunt in jungles. I hunt in the feed.</p>
+      <p>Social media is my hunting ground — I go deep looking for skills worth catching, ideas worth keeping, and knowledge worth building on. By profession, I teach English — helping students catch skills of their own.</p>
+    </div>
 
-  <h2>Field Log: Hunts So Far</h2>
+    <span class="tag">🎯 Currently hunting: new skills</span>
 
-  <div class="hunt">
-    <div class="hunt-title">🏹 The First Hunt</div>
-    <p>Every hunter starts somewhere. Mine began with a website — I built this very page from nothing, learned to navigate code I didn't understand, and shipped it into the world. First catch: proof I can actually build, not just talk about it.</p>
+    <h2>Field Log: Hunts So Far</h2>
+
+    <div class="hunt">
+      <div class="hunt-title">🏹 The First Hunt</div>
+      <p>Every hunter starts somewhere. Mine began with a website — I built this very page from nothing, learned to navigate code I didn't understand, and shipped it into the world. First catch: proof I can actually build, not just talk about it.</p>
+    </div>
+
+    <div class="hunt">
+      <div class="hunt-title">☁️ The Cloud Expedition</div>
+      <p>Before hunting in the wild web, I studied the terrain — AWS Cloud Practitioner taught me how the cloud works, what it costs, and how the giants of the internet run. Theory caught. The hands-on hunt continues.</p>
+    </div>
+
+    <div class="links">
+      <a href="https://www.linkedin.com/in/chaidir-s-pd-gr-0b7404190" target="_blank">Connect on LinkedIn →</a>
+    </div>
   </div>
 
-  <div class="hunt">
-    <div class="hunt-title">☁️ The Cloud Expedition</div>
-    <p>Before hunting in the wild web, I studied the terrain — AWS Cloud Practitioner taught me how the cloud works, what it costs, and how the giants of the internet run. Theory caught. The hands-on hunt continues.</p>
+  <!-- EXPERIENCE TAB -->
+  <div id="experience" class="tab-content">
+    <h2>Work Experience</h2>
+
+    <div class="job">
+      <div class="job-title">English Teacher — Ikhtiar Elementary School, Makassar</div>
+      <div class="job-meta">2025 – 2026</div>
+      <div class="job-desc">Implemented innovative, student-centered ESL methodologies tailored to primary learners, applying progressive language-acquisition methods across the school system.</div>
+    </div>
+
+    <div class="job">
+      <div class="job-title">English Teacher — Athirah Islamic School, Makassar</div>
+      <div class="job-meta">2022 – 2024</div>
+      <div class="job-desc">Delivered international-standard English lessons utilizing Pearson Curriculum frameworks and global learning resources.</div>
+    </div>
+
+    <div class="job">
+      <div class="job-title">English Teacher — Cahaya Quran Elementary School, Makassar</div>
+      <div class="job-meta">2021 – 2022</div>
+      <div class="job-desc">Taught foundational English to primary students utilizing the Oxford International Curriculum framework to enhance early literacy.</div>
+    </div>
+
+    <div class="job">
+      <div class="job-title">English Teacher — Ar-Rahmah Islamic Middle School, Makassar</div>
+      <div class="job-meta">2019 – 2021</div>
+    </div>
+
+    <div class="job">
+      <div class="job-title">English Teacher Coordinator & Curriculum Maker — Duta Samudera Indonesia (Hospitality & Cruise Ship Training Center), Makassar</div>
+      <div class="job-meta">2018</div>
+      <div class="job-desc">Evaluated and compared various international curricula to design an updated, well-organized English syllabus tailored to institutional needs.</div>
+    </div>
+
+    <div class="job">
+      <div class="job-title">English Teacher — Unismuh Makassar Language Institute</div>
+      <div class="job-meta">2018</div>
+    </div>
+
+    <div class="job">
+      <div class="job-title">English Tutor — Enermous College, Makassar</div>
+      <div class="job-meta">2017</div>
+    </div>
+
+    <div class="job">
+      <div class="job-title">English Teacher — Indonesian Learning Community Foundation, Berau</div>
+      <div class="job-meta">2017</div>
+    </div>
+
+    <div class="job">
+      <div class="job-title">English Teacher — International English Center, Makassar</div>
+      <div class="job-meta">2014</div>
+      <div class="job-desc">Formulated comprehensive lesson plans and delivered targeted English instruction aligned with Cambridge Assessment English standards.</div>
+    </div>
   </div>
 
-  <h2>Work Experience</h2>
+  <!-- EDUCATION TAB -->
+  <div id="education" class="tab-content">
+    <h2>Education</h2>
 
-  <div class="job">
-    <div class="job-title">English Teacher — Ikhtiar Elementary School, Makassar</div>
-    <div class="job-meta">2025 – 2026</div>
-    <div class="job-desc">Implemented innovative, student-centered ESL methodologies tailored to primary learners, applying progressive language-acquisition methods across the school system.</div>
-  </div>
+    <div class="edu-item">
+      <div class="edu-title">Teacher Professional Education — Makassar State University</div>
+      <div class="edu-meta">2017 – 2018 · Official Indonesian teaching certification, equivalent to a Postgraduate Certificate in Education (PGCE)</div>
+    </div>
 
-  <div class="job">
-    <div class="job-title">English Teacher — Athirah Islamic School, Makassar</div>
-    <div class="job-meta">2022 – 2024</div>
-    <div class="job-desc">Delivered international-standard English lessons utilizing Pearson Curriculum frameworks and global learning resources.</div>
-  </div>
+    <div class="edu-item">
+      <div class="edu-title">Bachelor of English Education — UNISMUH Makassar</div>
+      <div class="edu-meta">2011 – 2015</div>
+    </div>
 
-  <div class="job">
-    <div class="job-title">English Teacher — Cahaya Quran Elementary School, Makassar</div>
-    <div class="job-meta">2021 – 2022</div>
-    <div class="job-desc">Taught foundational English to primary students utilizing the Oxford International Curriculum framework to enhance early literacy.</div>
-  </div>
-
-  <div class="job">
-    <div class="job-title">English Teacher — Ar-Rahmah Islamic Middle School, Makassar</div>
-    <div class="job-meta">2019 – 2021</div>
-  </div>
-
-  <div class="job">
-    <div class="job-title">English Teacher Coordinator & Curriculum Maker — Duta Samudera Indonesia (Hospitality & Cruise Ship Training Center), Makassar</div>
-    <div class="job-meta">2018</div>
-    <div class="job-desc">Evaluated and compared various international curricula to design an updated, well-organized English syllabus tailored to institutional needs.</div>
-  </div>
-
-  <div class="job">
-    <div class="job-title">English Teacher — Unismuh Makassar Language Institute</div>
-    <div class="job-meta">2018</div>
-  </div>
-
-  <div class="job">
-    <div class="job-title">English Tutor — Enermous College, Makassar</div>
-    <div class="job-meta">2017</div>
-  </div>
-
-  <div class="job">
-    <div class="job-title">English Teacher — Indonesian Learning Community Foundation, Berau</div>
-    <div class="job-meta">2017</div>
-  </div>
-
-  <div class="job">
-    <div class="job-title">English Teacher — International English Center, Makassar</div>
-    <div class="job-meta">2014</div>
-    <div class="job-desc">Formulated comprehensive lesson plans and delivered targeted English instruction aligned with Cambridge Assessment English standards.</div>
-  </div>
-
-  <h2>Education</h2>
-
-  <div class="edu-item">
-    <div class="edu-title">Teacher Professional Education — Makassar State University</div>
-    <div class="edu-meta">2017 – 2018 · Official Indonesian teaching certification, equivalent to a Postgraduate Certificate in Education (PGCE)</div>
-  </div>
-
-  <div class="edu-item">
-    <div class="edu-title">Bachelor of English Education — UNISMUH Makassar</div>
-    <div class="edu-meta">2011 – 2015</div>
-  </div>
-
-  <h2>Training & Certifications</h2>
-  <ul class="cert-list">
-    <li>Teacher Training Series (British Council) — Organizing the Classroom, Managing Learners and Resources</li>
-    <li>Teacher Training Series (Pearson) — Building Speaking Fluency, Teaching for Real Progress, Making Feedback Faster, Making Learning Objectives Work, Differentiation Made Simple</li>
-    <li>Improving Classroom Management with Class Dojo (Coursera)</li>
-    <li>Microsoft Elevate AI Training Series — AI for Educators, Exploring AI & Microsoft Tools, 21st Century Learning Design, Microsoft Certified Educator Prep</li>
-    <li>Inclusive Planning for Mixed Ability Class (Indonesian Creative Class Foundation)</li>
-    <li>Inclusive Education at Elementary Level (Ministry of Primary and Secondary Education / Kemendikdasmen)</li>
-    <li>Reading Workshop: Optimizing Reading Instruction — Insights and Strategies from TKA Outcomes (Makassar City High School English MGMP)</li>
-    <li>Public Speaking Training (Investment Learning Center)</li>
-    <li>English Teacher Training (English House)</li>
-    <li>AWS Certified Cloud Practitioner</li>
-  </ul>
-
-  <div class="links">
-    <a href="https://www.linkedin.com/in/chaidir-s-pd-gr-0b7404190" target="_blank">Connect on LinkedIn →</a>
+    <h2 style="margin-top: 50px;">Training & Certifications</h2>
+    <ul class="cert-list">
+      <li>Teacher Training Series (British Council) — Organizing the Classroom, Managing Learners and Resources</li>
+      <li>Teacher Training Series (Pearson) — Building Speaking Fluency, Teaching for Real Progress, Making Feedback Faster, Making Learning Objectives Work, Differentiation Made Simple</li>
+      <li>Improving Classroom Management with Class Dojo (Coursera)</li>
+      <li>Microsoft Elevate AI Training Series — AI for Educators, Exploring AI & Microsoft Tools, 21st Century Learning Design, Microsoft Certified Educator Prep</li>
+      <li>Inclusive Planning for Mixed Ability Class (Indonesian Creative Class Foundation)</li>
+      <li>Inclusive Education at Elementary Level (Ministry of Primary and Secondary Education / Kemendikdasmen)</li>
+      <li>Reading Workshop: Optimizing Reading Instruction — Insights and Strategies from TKA Outcomes (Makassar City High School English MGMP)</li>
+      <li>Public Speaking Training (Investment Learning Center)</li>
+      <li>English Teacher Training (English House)</li>
+      <li>AWS Certified Cloud Practitioner</li>
+    </ul>
   </div>
 
   <footer>Built by Chaidir · The hunt continues.</footer>
+
+  <script>
+    function showTab(tabName) {
+      document.querySelectorAll('.tab-content').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.getElementById(tabName).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
 </body>
 </html>
