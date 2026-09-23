@@ -10,7 +10,7 @@
       max-width: 700px;
       margin: 80px auto;
       padding: 20px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     h1 {
       color: #e8a33d;
@@ -20,7 +20,7 @@
     h2 {
       color: #e8a33d;
       font-size: 1.4em;
-      margin-top: 50px;
+      margin-top: 60px;
       border-bottom: 1px solid #444;
       padding-bottom: 8px;
     }
@@ -44,7 +44,8 @@
       font-weight: bold;
     }
     .links {
-      margin-top: 30px;
+      margin-top: 40px;
+      margin-bottom: 20px;
     }
     .links a {
       color: #e8a33d;
@@ -58,16 +59,18 @@
       background-color: #e8a33d;
       color: #1a1a1a;
     }
-    ul.skills {
-      list-style: none;
-      padding: 0;
+    .hunt {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #242424;
+      border-left: 3px solid #e8a33d;
+      border-radius: 4px;
     }
-    ul.skills li {
-      padding: 8px 0;
-      border-bottom: 1px solid #2a2a2a;
-    }
-    ul.skills li::before {
-      content: "🎯 ";
+    .hunt-title {
+      color: #e8a33d;
+      font-weight: bold;
+      font-size: 1.15em;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -82,11 +85,17 @@
 
   <span class="tag">🎯 Currently hunting: new skills</span>
 
-  <h2>Skills Caught So Far</h2>
-  <ul class="skills">
-    <li>Built and deployed my first website (this one!)</li>
-    <li>AWS Cloud Practitioner — foundational cloud knowledge</li>
-  </ul>
+  <h2>Field Log: Hunts So Far</h2>
+
+  <div class="hunt">
+    <div class="hunt-title">🏹 The First Hunt</div>
+    <p>Every hunter starts somewhere. Mine began with a website — I built this very page from nothing, learned to navigate code I didn't understand, and shipped it into the world. First catch: proof I can actually build, not just talk about it.</p>
+  </div>
+
+  <div class="hunt">
+    <div class="hunt-title">☁️ The Cloud Expedition</div>
+    <p>Before hunting in the wild web, I studied the terrain — AWS Cloud Practitioner taught me how the cloud works, what it costs, and how the giants of the internet run. Theory caught. The hands-on hunt continues.</p>
+  </div>
 
   <div class="links">
     <a href="https://www.linkedin.com/in/chaidir-s-pd-gr-0b7404190" target="_blank">Connect on LinkedIn →</a>
